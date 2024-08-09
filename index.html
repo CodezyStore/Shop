@@ -3,6 +3,34 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Codezy</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                const titles = ["Codezy...", "Welcome to Codezy!", "Better with Codezy!", "Codezy Solutions!"];
+                let index = 0;
+    
+                function changeTitle() {
+                    let title = titles[index];
+                    let currentTitle = "";
+                    let charIndex = 0;
+    
+                    function typeTitle() {
+                        if (charIndex < title.length) {
+                            currentTitle += title.charAt(charIndex);
+                            document.title = currentTitle;
+                            charIndex++;
+                            setTimeout(typeTitle, 200);
+                        } else {
+                            index = (index + 1) % titles.length;
+                            setTimeout(changeTitle, 1000);
+                        }
+                    }
+    
+                    typeTitle();
+                }
+    
+                changeTitle();
+            });
+        </script>
 
         <link href="css/imports_new.css" rel="stylesheet">
 
@@ -269,52 +297,6 @@
                             </div>
                         </div>
                     </div>
-        
-                    <!-- Second Box -->
-                    <div data-aos="fade-up" data-aos-duration="2000" class="col-xl-4 col-lg-5 col-md-6 mt-md-0 mt-4 aos-init">
-                        <div class="box promo">
-                            <div class="top">
-                                <h3><span style="color: var(--primary)">GTAHUB</span> 💵 <small style="color: var(--primary);"> (Instant)</small></h3>
-                            </div>
-                            <hr>
-                            <div class="product">
-                              <p>Recommended for those people that want quick and easy money.</p>
-                            </div>
-                            <hr>
-                            <div class="checks">
-                              <div class="check">
-                                <span>No risk of Ban.</span>
-                              </div>
-                              <div class="check">
-                                <span>Support 24/7.</span>
-                              </div>
-                              <div class="check">
-                                <span>Receive Real-time Deposit.</span>
-                              </div>
-                              <div class="check">
-                                <span></span>
-                              </div>
-                              <div class="check">
-                                <span>Fast Delivery.</span>
-                              </div>
-                              <div class="buy">
-                                <div class="price">
-                                  <span> $12.00 </span>
-                                </div>
-                                <p>Best price on the market</p>
-                                <button
-                                  data-sellix-product="66b19163e8e97"
-                                  type="submit"
-                                  alt="Buy Now with sellix.io"
-                                  class="button rounded-circle px-5 aos-init"
-                                  id="purchaseButton"
-                                >
-                                  Purchase  |  🛒
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
                       </div>
                       <!-- FAQ Section -->
                       <div class="container">
